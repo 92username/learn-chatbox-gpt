@@ -41,9 +41,7 @@ streamlit run form.py
 ```
 This will open the app in your browser.
 
-5. Entering the API Key
-
-6. Generating Exercises
+5. Generating Exercises
 
 Select the programming language, specific topic (e.g., lists, functions), and set the number of exercises for each difficulty level. The app will then generate exercises based on your selections.
 
@@ -101,11 +99,7 @@ streamlit run form.py
 
 Isso abrirá o app no navegador.
 
-5. Inserindo a Chave API
-
-*O usuário deverá inserir sua chave API do OpenAI diretamente na interface do app. Para gerar uma chave API, visite [OpenAI API Keys](https://platform.openai.com/api-keys).*
-
-6. Gerando Exercícios
+5. Gerando Exercícios
 
 Selecione a linguagem de programação, o tema específico (ex.: listas, funções) e defina a quantidade de exercícios para cada nível de dificuldade. O app então gerará os exercícios com base nas opções fornecidas.
 Contribuições

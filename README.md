@@ -23,7 +23,7 @@ Linux or macOS:
 python3 -m venv venv
 source venv/bin/activate
 ```
-Windows:
+
 ```
 python -m venv venv
 venv\Scripts\activate
@@ -42,8 +42,6 @@ streamlit run form.py
 This will open the app in your browser.
 
 5. Entering the API Key
-
-*The user will need to enter their OpenAI API key directly in the app interface. To generate an API key, visit  [OpenAI API Keys](https://platform.openai.com/api-keys)*
 
 6. Generating Exercises
 

@@ -1,11 +1,10 @@
 # README.md 
 GPT Exercise Generator
 
-This app generates programming exercises based on difficulty levels, using ChatGPT to provide personalized content. Users can input their OpenAI API key and select the number of exercises for each difficulty level.
+This app generates programming exercises based on difficulty levels, using ChatGPT to provide personalized content. Users can select the number of exercises for each difficulty level.
 Requirements
 
 - Python 3.10+
-- OpenAI account with API access
 - Dependencies listed in requirements.txt
 
 Installation and Usage
@@ -52,11 +51,10 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 # Gerador de Exercícios com GPT PT- BR
 
-Este é um app que gera exercícios de programação com base em níveis de dificuldade, usando o ChatGPT para fornecer conteúdo personalizado. O usuário pode inserir sua chave da API do OpenAI e selecionar a quantidade de exercícios para cada nível de dificuldade.
+Este é um app que gera exercícios de programação com base em níveis de dificuldade, usando o ChatGPT para fornecer conteúdo personalizado. O usuário pode selecionar a quantidade de exercícios para cada nível de dificuldade.
 Requisitos
 
 - Python 3.10+
-- Conta na OpenAI com acesso à API
 - Dependências listadas em requirements.txt
 
 ## Instalação e Execução

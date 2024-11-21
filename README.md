@@ -36,21 +36,27 @@ pip install -r requirements.txt
 To use **learn-chatbox-gpt**, you need to configure an environment variable with your OpenAI API key. Follow the steps below:
 
   a. **Open a terminal** on your system.
+  
   b. Navigate to the project directory. For example:
      ```bash
      cd /home/nbx/Desktop/my-folder/testing/learn-chatbox-gpt
      ```
+     
   c. **Create the `.env` file** in the project directory and open it with a text editor. For example:
      ```bash
      nano .env
      ```
+     
   d. **Add the following line to the `.env` file**, replacing `your_api_key_here` with your actual OpenAI API key:
      ```
      OPENAI_API_KEY=your_api_key_here
      ```
+     
   e. **Save the file and exit the editor**:
    - In **nano**, press `Ctrl + X`, then `Y`, and then `Enter`.
+   - 
   f. After creating the `.env` file, your project will be ready to run.
+
 
   > **Note:** Keep your API key secure and do not share it publicly.
 

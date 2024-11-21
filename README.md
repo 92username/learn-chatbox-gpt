@@ -31,16 +31,43 @@ venv\Scripts\activate
 ```
 pip install -r requirements.txt
 ```
-4. Run the App
+4. Setting Up the OpenAI API Key
+
+To use **learn-chatbox-gpt**, you need to configure an environment variable with your OpenAI API key. Follow the steps below:
+
+  a. **Open a terminal** on your system.
+  b. Navigate to the project directory. For example:
+     ```bash
+     cd /home/nbx/Desktop/my-folder/testing/learn-chatbox-gpt
+     ```
+  c. **Create the `.env` file** in the project directory and open it with a text editor. For example:
+     ```bash
+     nano .env
+     ```
+  d. **Add the following line to the `.env` file**, replacing `your_api_key_here` with your actual OpenAI API key:
+     ```
+     OPENAI_API_KEY=your_api_key_here
+     ```
+  e. **Save the file and exit the editor**:
+   - In **nano**, press `Ctrl + X`, then `Y`, and then `Enter`.
+  f. After creating the `.env` file, your project will be ready to run.
+
+  > **Note:** Keep your API key secure and do not share it publicly.
+
+  You are now ready to run the script and use **learn-chatbox-gpt**!
+
+5. Run the App
 
 To run the app, use the command:
 
 ```
 streamlit run form.py
 ```
-This will open the app in your browser.
+This will open the app in your browser(localhost).
+![Main Screen](/mainscreen.png)
+![Output Screen](/outputscreen.png)
 
-5. Generating Exercises
+6. Generating Exercises
 
 Select the programming language, specific topic (e.g., lists, functions), and set the number of exercises for each difficulty level. The app will then generate exercises based on your selections.
 
@@ -48,60 +75,3 @@ Select the programming language, specific topic (e.g., lists, functions), and se
 ## Contributions
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
-
-# Gerador de Exercícios com GPT PT- BR
-
-Este é um app que gera exercícios de programação com base em níveis de dificuldade, usando o ChatGPT para fornecer conteúdo personalizado. O usuário pode selecionar a quantidade de exercícios para cada nível de dificuldade.
-Requisitos
-
-- Python 3.10+
-- Dependências listadas em requirements.txt
-
-## Instalação e Execução
-
-Siga os passos abaixo para instalar e executar o app:
-1. Clone o Repositório
-
-```
-git clone https://github.com/92username/learn-chatbox-gpt.git
-cd learn-chatbox-gpt
-```
-2. Crie e Ative um Ambiente Virtual
-Linux ou macOS:
-
-```
-python3 -m venv venv
-source venv/bin/activate
-```
-
-Windows:
-
-```
-python -m venv venv
-venv\Scripts\activate
-```
-
-3. Instale as Dependências
-
-```
-pip install -r requirements.txt
-```
-
-4. Execute o App
-
-Para rodar o app, execute o comando abaixo:
-
-```
-streamlit run form.py
-```
-
-Isso abrirá o app no navegador.
-
-5. Gerando Exercícios
-
-Selecione a linguagem de programação, o tema específico (ex.: listas, funções) e defina a quantidade de exercícios para cada nível de dificuldade. O app então gerará os exercícios com base nas opções fornecidas.
-Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
-----

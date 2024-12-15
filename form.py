@@ -4,16 +4,15 @@ import time
 import streamlit as st
 from dotenv import load_dotenv
 
-# Carregar variáveis de ambiente a partir do arquivo .env
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")  # Obter a chave da API do OpenAI
+# Definir a chave da API usando o Streamlit Secrets
+api_key = st.secrets["openai"]["OPENAI_API_KEY"]
 
 if not api_key:
     raise ValueError("API key não encontrada. Verifique se o arquivo .env está configurado corretamente.")
 else:
     print("API key encontrada. Inicializando o aplicativo...")
 
-# Definir a chave da API
+# Definir a chave da API para o OpenAI
 openai.api_key = api_key
 
 # listagem de linguagens de programação

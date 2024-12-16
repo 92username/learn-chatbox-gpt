@@ -1,3 +1,5 @@
+[![CI Workflow](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml)
+
 # README.md 
 
 ## GPT Exercise Generator

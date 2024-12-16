@@ -81,10 +81,6 @@ I am working on hosting this webapp on a VPS at Hostinger.
 - [x] Provided APIKEY for free use
 - [x] Provide link for direct access
 
-## Roadmap
-
-- [x] Currently in the deployment phase using a Docker container on a VPS at Hostinger.
-
 ## Contributions
 
 Contributions are welcome! Feel free to open issues or submit pull requests.

@@ -4,45 +4,43 @@ import time
 import streamlit as st
 from dotenv import load_dotenv
 
-# Definir a chave da API usando o Streamlit Secrets
-api_key = st.secrets["openai"]["OPENAI_API_KEY"]
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
     raise ValueError("API key não encontrada. Verifique se o arquivo .env está configurado corretamente.")
 else:
     print("API key encontrada. Inicializando o aplicativo...")
 
-# Definir a chave da API para o OpenAI
 openai.api_key = api_key
 
-# listagem de linguagens de programação
 lista_linguagens = ["Python", "JavaScript", "Java", "C++", "C#", "Dart"]
-# Função para gerar exercícios
 
 def gerar_exercicios(linguagem, niveis, tema, quantidades):
-    # Configuração da mensagem para a API
+
     messages = [
-    {
-        "role": "system",
-        "content": (
-            f"""Você é um gerador de exercícios de programação. Não exibir as respostas dos exercícios.
-            Vamos definir um nível de dificuldade crescente para elaborarmos exercícios para que 
-            eu aprenda {', '.join(lista_linguagens)} de programação de forma direta e descomplicada. 
-            Utilize uma escala de 1 a 5, onde o nível 1 é 'Muito Fácil' e o 
-            nível 5 é 'Muito Difícil'. Elabore exercícios 
-            para cada nível com base na seguinte descrição:
-            - Nível 1: Conceitos básicos e fixação.
-            - Nível 2: Aplicação de conceitos básicos.
-            - Nível 3: Construção de lógica com conceitos aprendidos.
-            - Nível 4: Integração com conteúdos anteriores.
-            - Nível 5: Uso avançado de todos os conceitos estudados."""
-        )
-    },
-    {
-        "role": "user",
-        "content": f"Crie exercícios de {linguagem} sobre o tema {tema}."
-    }
-]
+        {
+            "role": "system",
+            "content": (
+                f"""Você é um gerador de exercícios de programação. Não exibir as respostas dos exercícios.
+                Vamos definir um nível de dificuldade crescente para elaborarmos exercícios para que 
+                eu aprenda {', '.join(lista_linguagens)} de programação de forma direta e descomplicada. 
+                Utilize uma escala de 1 a 5, onde o nível 1 é 'Muito Fácil' e o 
+                nível 5 é 'Muito Difícil'. Elabore exercícios 
+                para cada nível com base na seguinte descrição:
+                - Nível 1: Conceitos básicos e fixação.
+                - Nível 2: Aplicação de conceitos básicos.
+                - Nível 3: Construção de lógica com conceitos aprendidos.
+                - Nível 4: Integração com conteúdos anteriores.
+                - Nível 5: Uso avançado de todos os conceitos estudados."""
+            )
+        },
+        {
+            "role": "user",
+            "content": f"Crie exercícios de {linguagem} sobre o tema {tema}."
+        }
+    ]
     for i, nivel in enumerate(niveis):
         if quantidades[i] > 0:
             messages.append({

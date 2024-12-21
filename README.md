@@ -6,6 +6,13 @@
 
 This app generates programming exercises based on difficulty levels, using ChatGPT to provide personalized content. Users can select the number of exercises for each difficulty level, making it easy to practice and learn.
 
+## Access the App
+
+The app is 100% functional and can be accessed by clicking the badge below:
+
+[![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=for-the-badge&logo=hostinger&logoColor=white)](http://147.79.82.234:8501/)
+
+
 ## Requirements
 
 - Python 3.10+
@@ -57,12 +64,6 @@ Follow the steps below to install and run the app:
 5. Generating Exercises
 
     Select the programming language, specific topic (e.g., lists, functions), and set the number of exercises for each difficulty level. The app will then generate exercises based on your selections.
-
-## Access the App
-
-The app is 100% functional and can be accessed by clicking the link below:
-
-[Streamlit App Link](https://exercicios-programacao-gpt.streamlit.app/)
 
 ## Run Locally
 

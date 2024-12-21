@@ -34,9 +34,12 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
         {
             "role": "system",
             "content": (
-                f"""Você é um gerador de exercícios de programação. Não exibir as respostas dos exercícios.
-                Vamos definir um nível de dificuldade crescente para elaborarmos exercícios para que 
-                eu aprenda {', '.join(lista_linguagens)} de programação de forma direta e descomplicada. 
+                f"""Você é um gerador de exercícios de programação. Não exibir
+                as respostas dos exercícios.
+                Vamos definir um nível de dificuldade crescente para elaborarmos
+                exercícios para que 
+                eu aprenda {', '.join(lista_linguagens)} de programação de forma
+                direta e descomplicada. 
                 Utilize uma escala de 1 a 5, onde o nível 1 é 'Muito Fácil' e o 
                 nível 5 é 'Muito Difícil'. Elabore exercícios 
                 para cada nível com base na seguinte descrição:

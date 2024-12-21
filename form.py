@@ -1,6 +1,6 @@
-import openai
 import os
 import time
+import openai
 import streamlit as st
 from dotenv import load_dotenv
 
@@ -10,14 +10,25 @@ api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
     raise ValueError("API key não encontrada. Verifique se o arquivo .env está configurado corretamente.")
-else:
-    print("API key encontrada. Inicializando o aplicativo...")
+print("API key encontrada. Inicializando o aplicativo...")
 
 openai.api_key = api_key
 
 lista_linguagens = ["Python", "JavaScript", "Java", "C++", "C#", "Dart"]
 
 def gerar_exercicios(linguagem, niveis, tema, quantidades):
+    """
+    Gera exercícios de programação com base na linguagem, níveis, tema e quantidades fornecidos.
+
+    Args:
+        linguagem (str): A linguagem de programação para os exercícios.
+        niveis (list): Uma lista de níveis de dificuldade.
+        tema (str): O tema dos exercícios.
+        quantidades (list): A quantidade de exercícios para cada nível.
+
+    Returns:
+        str: Os exercícios gerados pela API OpenAI.
+    """
 
     messages = [
         {

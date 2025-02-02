@@ -12,6 +12,7 @@ The app is 100% functional and can be accessed by clicking the badge below:
 
 [![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=for-the-badge&logo=hostinger&logoColor=white)](http://147.79.82.234:8501/)
 
+> **Nota:** Caso a aplicação não funcione por causa dos créditos da API da OpenAI terem se esgotado, rode localmente utilizando sua própria chave da API. Instruções de como rodar localmente a seguir.
 
 ## Requirements
 

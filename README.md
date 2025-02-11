@@ -8,7 +8,7 @@ This app generates programming exercises based on difficulty levels, using ChatG
 
 ## Access the App
 
-The app is 100% functional and can be accessed by clicking the badge below:
+~~The app is 100% functional and can be accessed by clicking the badge below:~~
 
 [![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=for-the-badge&logo=hostinger&logoColor=white)](http://147.79.82.234:8501/)
 

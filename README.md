@@ -11,8 +11,7 @@ This app generates programming exercises based on difficulty levels, using ChatG
 ~~The app is 100% functional and can be accessed by clicking the badge below:~~
 
 [![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=for-the-badge&logo=hostinger&logoColor=white)](http://147.79.82.234:8501/)
-
-> Note: If the application does not work because the OpenAI API credits have run out, run it locally using your own API key. Instructions on how to run it locally follow.
+> **Nota:** : O Software is Off-line - Reason: Redeploy on a SSL certificated personal domain.
 
 ## Requirements
 
@@ -20,6 +19,8 @@ This app generates programming exercises based on difficulty levels, using ChatG
 - Dependencies listed in requirements.txt
 
 ## Installation and Usage
+
+> Note: If the application does not work because the OpenAI API credits have run out, run it locally using your own API key. Instructions on how to run it locally follow.
 
 Follow the steps below to install and run the app:
 

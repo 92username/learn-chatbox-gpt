@@ -37,9 +37,10 @@ import time
 import openai
 import streamlit as st
 from dotenv import load_dotenv
+from openai import OpenAI
 
 load_dotenv()
-
+client = OpenAI()
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
@@ -102,7 +103,7 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
             )
 
     # Chamada à API OpenAI
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=messages,
         max_tokens=1000,  # Limitar a quantidade de tokens
@@ -110,7 +111,7 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
     )
 
     # Retornar o texto gerado pela API
-    return response.choices[0].message.content.strip()
+    return response.choices[0].message['content'].strip()
 
 
 # Função principal

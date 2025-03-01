@@ -3,6 +3,10 @@ services:
     container_name: learn-chatbox-gpt
     image: learn-chatbox-gpt
     build: .
+    environment:
+    - HTTP_PROXY=
+    - HTTPS_PROXY=
+
     ports:
       - "8501:8501"
     restart: always

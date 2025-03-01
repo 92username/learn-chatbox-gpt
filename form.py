@@ -102,9 +102,7 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
             )
 
     # Chamada à API OpenAI
-    client = openai.OpenAI()
-
-    response = client.chat.completions.create(
+    response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=messages,
         max_tokens=1000,  # Limitar a quantidade de tokens

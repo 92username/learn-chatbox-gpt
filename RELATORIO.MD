@@ -39,7 +39,9 @@ Para facilitar o deploy e a portabilidade, a aplicação foi containerizada com 
 O projeto está versionado no GitHub.
 - CI/CD configurado com GitHub Actions, realizando etapas de build e deploy automatizado
 
-**Verifique aqui o workflow:** ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)(https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml)
+**Verifique aqui o workflow:**  
+[![GitHub Actions](https://img.shields.io/badge/github%20actions-%23232E1E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml)
+
 
 ### 3.1 Qualidade do Código
 

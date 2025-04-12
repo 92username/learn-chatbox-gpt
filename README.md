@@ -1,5 +1,7 @@
 [![CI Workflow](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml) [![Pylint](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b7a1d3a48d4241c08c41ce6f8f1ff907)](https://app.codacy.com/gh/92username/learn-chatbox-gpt/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
+https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
+
 # README.md 
 
 ## GPT Exercise Generator
@@ -8,10 +10,10 @@ This app generates programming exercises based on difficulty levels, using ChatG
 
 ## Access the App
 
-~~The app is 100% functional and can be accessed by clicking the badge below:~~
+The app is 100% functional and can be accessed by clicking the badge below:
 
-[![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=for-the-badge&logo=hostinger&logoColor=white)](http://147.79.82.234:8501/)
-> **Nota:** : O Software is Off-line - Reason: Redeploy on a SSL certificated personal domain.
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)(http://ec2-3-233-24-241.compute-1.amazonaws.com:8501/)
+> **Nota:** : O Software is online !
 
 ## Requirements
 
@@ -78,13 +80,6 @@ To run the app locally, you need to provide an OpenAI API key.
     ```
 
 2. Follow the installation and usage instructions above.
-
-## Hosting
-
-I am working on hosting this webapp on a VPS at Hostinger.
-
-- [x] Provided APIKEY for free use
-- [x] Provide link for direct access
 
 ## Contributions
 

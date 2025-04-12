@@ -1,4 +1,4 @@
-name: CI Workflow
+name: CI/CD Workflow
 
 on:
   push:
@@ -25,3 +25,27 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Copy files to EC2
+      run: |
+        scp -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} -r ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
+
+    - name: Restart application on EC2
+      run: |
+        ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+        cd /home/ubuntu/app
+        # Comandos para reiniciar o serviço ou servidor
+        sudo systemctl restart my-app.service
+        EOF

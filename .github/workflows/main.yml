@@ -54,7 +54,7 @@ jobs:
       - name: Restart application on EC2 (via nohup)
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-          pkill -f "streamlit run" || true
+          sudo pkill -f "streamlit run" || true
           cd /home/ubuntu/app
           nohup streamlit run form.py > log.out 2>&1 &
           EOF

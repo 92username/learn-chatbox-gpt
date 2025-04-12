@@ -15,6 +15,10 @@ The app is 100% functional and can be accessed by clicking the badge below:
 [![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](http://ec2-3-233-24-241.compute-1.amazonaws.com:8501/)
 > **Nota:** : Software is online !
 
+![Main Screen](/assets/mainscreen.png)
+
+![Expected Output](/assets/outputscreen.png)
+
 ## Requirements
 
 - Python 3.10+

@@ -38,8 +38,9 @@ from openai import OpenAI
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv()
 
+load_dotenv()
+client = OpenAI()
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
@@ -102,6 +103,7 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
             )
 
     # Chamada à API OpenAI
+
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     response = client.chat.completions.create(
@@ -112,7 +114,7 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
     )
 
     # Retornar o texto gerado pela API
-    return response.choices[0].message.content.strip()
+    return response.choices[0].message['content'].strip()
 
 
 # Função principal

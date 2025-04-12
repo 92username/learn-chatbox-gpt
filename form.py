@@ -34,10 +34,10 @@ Como usar:
 """
 import os
 import time
-import openai
+from openai import OpenAI
 import streamlit as st
 from dotenv import load_dotenv
-from openai import OpenAI
+
 
 load_dotenv()
 client = OpenAI()
@@ -49,7 +49,7 @@ if not api_key:
     )
 print("API key encontrada. Inicializando o aplicativo...")
 
-openai.api_key = api_key
+OpenAI.api_key = api_key
 
 lista_linguagens = ["Python", "JavaScript", "Java", "C++", "C#", "Dart"]
 
@@ -103,6 +103,9 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
             )
 
     # Chamada à API OpenAI
+
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=messages,

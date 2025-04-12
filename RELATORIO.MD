@@ -45,7 +45,7 @@ O projeto está versionado no GitHub.
 
 ### 3.1 Qualidade do Código
 
-O código foi avaliado com a ferramenta Pylint, atingindo nota 9.79. Também foi analisado pela plataforma Codacy, que atribuiu conceito B. Esses resultados refletem um bom nível de padronização, legibilidade e aderência às práticas recomendadas de desenvolvimento Python.
+O código foi avaliado com a ferramenta Pylint, atingindo nota 9.79. Também foi analisado pela plataforma Codacy, que atribuiu conceito B. Esses resultados refletem um bom nível de padronização, legibilidade e aderência às práticas recomendadas de desenvolvimento Python e documentação.
 
 ---
 
@@ -72,16 +72,16 @@ O setup da instância foi realizado via terminal com autenticação por chave SS
 
 ## 6. Monitoramento e Expansão (Roadmap)
 
-- Integração com Nginx como reverse proxy para domínio customizado
-- Configuração HTTPS com Certbot e renovação automática
-- Monitoramento de containers com Prometheus + Grafana (planejado)
+- [ ] Integração com Nginx como reverse proxy para domínio customizado
+- [ ] Configuração HTTPS com Certbot e renovação automática
+- [ ] Monitoramento de containers com Prometheus + Grafana (planejado)
 ---
 
 ## Conclusão
 
 Este projeto demonstra competências técnicas em:
-- Desenvolvimento Python
-- Containerização com Docker
-- Versionamento com Git e GitHub
-- Configuração e deploy em cloud (AWS EC2)
-- Boas práticas DevOps em ambientes Linux
+- [x] Desenvolvimento Python
+- [x] Containerização com Docker
+- [x] Versionamento com Git e GitHub
+- [x] Configuração e deploy em cloud (AWS EC2)
+- [x] Boas práticas DevOps em ambientes Linux / Terminal

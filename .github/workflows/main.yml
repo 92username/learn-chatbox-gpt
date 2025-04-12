@@ -58,6 +58,7 @@ jobs:
           cd /home/ubuntu/app
           nohup streamlit run form.py > log.out 2>&1 &
           EOF
+        
 
       - name: Clean up SSH key
         run: rm -f key.pem

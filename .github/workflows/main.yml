@@ -11,11 +11,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -32,7 +32,7 @@ jobs:
           PYTHONPATH: .
         run: |
           pytest
-      
+
   deploy:
     needs: build
     runs-on: ubuntu-24.04
@@ -51,11 +51,12 @@ jobs:
           sudo apt-get update && sudo apt-get install rsync -y
           rsync -av --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -i key.pem" ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
 
-      - name: Restart application on EC2
+      - name: Restart application on EC2 (via nohup)
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+          pkill -f "streamlit run" || true
           cd /home/ubuntu/app
-          sudo systemctl restart my-app.service
+          nohup streamlit run form.py > log.out 2>&1 &
           EOF
 
       - name: Clean up SSH key

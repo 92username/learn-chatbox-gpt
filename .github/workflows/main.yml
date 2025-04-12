@@ -33,30 +33,31 @@ jobs:
       run: |
         pytest
       
-  deploy:
-    needs: build
-    runs-on: ubuntu-24.04
+deploy:
+  needs: build
+  runs-on: ubuntu-24.04
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
 
-    - name: Create SSH key file
-      run: |
-        echo "${{ secrets.EC2_SSH_KEY }}" > key.pem
-        chmod 600 key.pem
-    
-    - name: Copy files to EC2
-      run: |
-        scp -o StrictHostKeyChecking=no -i key.pem -r ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
-    
-    - name: Restart application on EC2
-      run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-        cd /home/ubuntu/app
-        sudo systemctl restart my-app.service
-        EOF
-              
-    - name: Clean up SSH key
-      run: rm -f key.pem
-      
+  - name: Create SSH key file
+    run: |
+      echo "${{ secrets.EC2_SSH_KEY }}" > key.pem
+      chmod 600 key.pem
+
+  - name: Copy project files to EC2 (excluding .git)
+    run: |
+      sudo apt-get update && sudo apt-get install rsync -y
+      rsync -av --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -i key.pem" ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
+
+  - name: Restart application on EC2
+    run: |
+      ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+      cd /home/ubuntu/app
+      sudo systemctl restart my-app.service
+      EOF
+
+  - name: Clean up SSH key
+    run: rm -f key.pem
+  

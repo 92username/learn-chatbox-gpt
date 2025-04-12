@@ -72,16 +72,16 @@ O setup da instância foi realizado via terminal com autenticação por chave SS
 
 ## 6. Monitoramento e Expansão (Roadmap)
 
-- Integração com Nginx como reverse proxy para domínio customizado
-- Configuração HTTPS com Certbot e renovação automática
-- Monitoramento de containers com Prometheus + Grafana (planejado)
+- [ ] Integração com Nginx como reverse proxy para domínio customizado
+- [ ] Configuração HTTPS com Certbot e renovação automática
+- [ ] Monitoramento de containers com Prometheus + Grafana (planejado)
 ---
 
 ## Conclusão
 
 Este projeto demonstra competências técnicas em:
-- Desenvolvimento Python
-- Containerização com Docker
-- Versionamento com Git e GitHub
-- Configuração e deploy em cloud (AWS EC2)
-- Boas práticas DevOps em ambientes Linux
+- [x] Desenvolvimento Python
+- [x] Containerização com Docker
+- [x] Versionamento com Git e GitHub
+- [x] Configuração e deploy em cloud (AWS EC2)
+- [x] Boas práticas DevOps em ambientes Linux / Terminal

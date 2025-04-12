@@ -41,10 +41,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Create SSH key file
+      run: |
+        echo "${{ secrets.EC2_SSH_KEY }}" > key.pem
+        chmod 600 key.pem
+    
     - name: Copy files to EC2
       run: |
-        scp -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} -r ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
-
+        scp -o StrictHostKeyChecking=no -i key.pem -r ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
+    
     - name: Restart application on EC2
       run: |
         ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
@@ -52,3 +57,7 @@ jobs:
         # Comandos para reiniciar o serviço ou servidor
         sudo systemctl restart my-app.service
         EOF
+        
+    - name: Clean up SSH key
+      run: rm -f key.pem
+      

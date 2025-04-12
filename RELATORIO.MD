@@ -10,11 +10,11 @@ Este documento apresenta o fluxo completo de desenvolvimento, containerização 
 
 A aplicação foi desenvolvida em Python, utilizando o framework **Streamlit** para interface interativa com o usuário. Seu objetivo é gerar listas de exercícios personalizados com base em três parâmetros: linguagem de programação, tema e nível de dificuldade.
 
+O projeto utiliza a API da OpenAI para geração dinâmica de conteúdo com inteligência artificial. O modelo utilizado é o 'gpt-3.5-turbo' para interpretar os parâmetros fornecidos pelo usuário e criar exercícios personalizados em tempo real.
+
 ### Stack Utilizada
 - **Linguagem:** Python 3.x
 - **Framework:** Streamlit
-- **Gerenciamento de ambiente:** `venv`
-- **Gerenciamento de dependências:** `requirements.txt`
 - **Variáveis sensíveis:** `.env` com `python-dotenv`
 
 ---

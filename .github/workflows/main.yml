@@ -13,51 +13,50 @@ jobs:
     runs-on: ubuntu-24.04
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run tests
-      env:
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        PYTHONPATH: .
-      run: |
-        pytest
+      - name: Checkout code
+        uses: actions/checkout@v2
       
-deploy:
-  needs: build
-  runs-on: ubuntu-24.04
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
 
-  steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-  - name: Create SSH key file
-    run: |
-      echo "${{ secrets.EC2_SSH_KEY }}" > key.pem
-      chmod 600 key.pem
+      - name: Run tests
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PYTHONPATH: .
+        run: |
+          pytest
+      
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
 
-  - name: Copy project files to EC2 (excluding .git)
-    run: |
-      sudo apt-get update && sudo apt-get install rsync -y
-      rsync -av --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -i key.pem" ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-  - name: Restart application on EC2
-    run: |
-      ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-      cd /home/ubuntu/app
-      sudo systemctl restart my-app.service
-      EOF
+      - name: Create SSH key file
+        run: |
+          echo "${{ secrets.EC2_SSH_KEY }}" > key.pem
+          chmod 600 key.pem
 
-  - name: Clean up SSH key
-    run: rm -f key.pem
-  
+      - name: Copy project files to EC2 (excluding .git)
+        run: |
+          sudo apt-get update && sudo apt-get install rsync -y
+          rsync -av --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -i key.pem" ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
+
+      - name: Restart application on EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+          cd /home/ubuntu/app
+          sudo systemctl restart my-app.service
+          EOF
+
+      - name: Clean up SSH key
+        run: rm -f key.pem

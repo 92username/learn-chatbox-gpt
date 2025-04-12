@@ -38,6 +38,7 @@ from openai import OpenAI
 import streamlit as st
 from dotenv import load_dotenv
 
+#check push to main.  delete after confirmed.
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))

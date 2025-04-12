@@ -34,24 +34,27 @@ Como usar:
 """
 import os
 import time
+import openai
 from openai import OpenAI
+client = OpenAI()
 import streamlit as st
 from dotenv import load_dotenv
 
-
+# Load environment variables from .env file
 load_dotenv()
-client = OpenAI()
+
 api_key = os.getenv("OPENAI_API_KEY")
 
+# Check if the API key is available
 if not api_key:
     raise ValueError(
         "API key não encontrada. Verifique se o arquivo .env está configurado corretamente."
     )
-print("API key encontrada. Inicializando o aplicativo...")
 
-OpenAI.api_key = api_key
+# Initialize the OpenAI client with the API key
+client = openai.OpenAI(api_key=api_key)
 
-lista_linguagens = ["Python", "JavaScript", "Java", "C++", "C#", "Dart"]
+lista_linguagens = ["Python", "JavaScript", "Java", "C++", "C#", "Dart", "Go"]
 
 
 def gerar_exercicios(linguagem, niveis, tema, quantidades):
@@ -103,18 +106,13 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
             )
 
     # Chamada à API OpenAI
-
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=messages,
-        max_tokens=1000,  # Limitar a quantidade de tokens
-        temperature=0.7,
-    )
+    response = client.chat.completions.create(model="gpt-3.5-turbo",
+    messages=messages,
+    max_tokens=1000,  # Limitar a quantidade de tokens
+    temperature=0.7)
 
     # Retornar o texto gerado pela API
-    return response.choices[0].message['content'].strip()
+    return response.choices[0].message.content.strip()
 
 
 # Função principal

@@ -1,5 +1,6 @@
 services:
-  app:
+  learn-chatbox-gpt: # The name of the service
+    # The name of the container
     container_name: learn-chatbox-gpt
     image: learn-chatbox-gpt
     build: .

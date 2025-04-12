@@ -45,7 +45,7 @@ O projeto está versionado no GitHub.
 
 ### 3.1 Qualidade do Código
 
-O código foi avaliado com a ferramenta Pylint, atingindo nota 9.79. Também foi analisado pela plataforma Codacy, que atribuiu conceito B. Esses resultados refletem um bom nível de padronização, legibilidade e aderência às práticas recomendadas de desenvolvimento Python.
+O código foi avaliado com a ferramenta Pylint, atingindo nota 9.79. Também foi analisado pela plataforma Codacy, que atribuiu conceito B. Esses resultados refletem um bom nível de padronização, legibilidade e aderência às práticas recomendadas de desenvolvimento Python e documentação.
 
 ---
 

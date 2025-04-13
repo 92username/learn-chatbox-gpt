@@ -1,8 +1,10 @@
 [![CI Workflow](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml) [![Pylint](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b7a1d3a48d4241c08c41ce6f8f1ff907)](https://app.codacy.com/gh/92username/learn-chatbox-gpt/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/) [![License](https://img.shields.io/github/license/92username/learn-chatbox-gpt)](LICENSE) 
 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/92username/learn-chatbox-gpt) ![Last Commit](https://img.shields.io/github/last-commit/92username/learn-chatbox-gpt) 
+
 ![Docker stats](https://img.shields.io/badge/Docker%20/%20stats-blue?logo=docker)
 ![Docker Image Size (latest)](https://img.shields.io/docker/image-size/user92/learn-chatbox-gpt/latest)
-![Docker Pulls](https://img.shields.io/docker/pulls/user92/learn-chatbox-gpt) 
+![Docker Pulls](https://img.shields.io/docker/pulls/user92/learn-chatbox-gpt) ![Docker Image Version](https://img.shields.io/docker/v/user92/learn-chatbox-gpt?sort=semver)
 
 
 

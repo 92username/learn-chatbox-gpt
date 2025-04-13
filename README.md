@@ -1,8 +1,13 @@
-[![CI Workflow](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml) [![Pylint](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b7a1d3a48d4241c08c41ce6f8f1ff907)](https://app.codacy.com/gh/92username/learn-chatbox-gpt/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/) [![License](https://img.shields.io/github/license/92username/learn-chatbox-gpt)](LICENSE)
+[![CI Workflow](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/main.yml) [![Pylint](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml/badge.svg)](https://github.com/92username/learn-chatbox-gpt/actions/workflows/pylint.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b7a1d3a48d4241c08c41ce6f8f1ff907)](https://app.codacy.com/gh/92username/learn-chatbox-gpt/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/) [![License](https://img.shields.io/github/license/92username/learn-chatbox-gpt)](LICENSE) 
+
+![Docker stats](https://img.shields.io/badge/Docker%20/%20stats-blue?logo=docker)
+![Docker Image Size (latest)](https://img.shields.io/docker/image-size/user92/learn-chatbox-gpt/latest)
+![Docker Pulls](https://img.shields.io/docker/pulls/user92/learn-chatbox-gpt) 
 
 
 
-![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white) ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+
+![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white) ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 # README.md 
 
@@ -14,7 +19,7 @@ This app generates programming exercises based on difficulty levels, using ChatG
 
 The app is 100% functional and can be accessed by clicking the badge below:
 
-[![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](http://ec2-3-233-24-241.compute-1.amazonaws.com:8501/)
+[![AWS](https://img.shields.io/badge/AWS-Cloud-%230072C6.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](http://ec2-3-233-24-241.compute-1.amazonaws.com:8501/)
 > **Nota:** : Software is online !
 
 ![Main Screen](/assets/mainscreen.png)

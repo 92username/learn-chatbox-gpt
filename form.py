@@ -103,8 +103,6 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
 
     # Chamada à API OpenAI
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=messages,

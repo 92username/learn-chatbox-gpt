@@ -1,14 +1,23 @@
-# tests/test_streamlit_load.py
-# check if strealit loads without errors
+"""
+Test module to verify if the Streamlit script loads without errors.
+
+This script adds the project root directory to the sys.path and 
+tests if the 'form' module can be imported without raising any exceptions.
+"""
+
 import sys
 import os
 
-# Adiciona o diretório raiz do projeto ao path
+# Add the project root directory to the sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def test_streamlit_script_runs():
+    """
+    Test if the Streamlit script ('form' module) can be imported without errors.
+    """
     try:
         __import__("form")
-    except Exception as e:
-        assert False, f"Erro ao carregar Streamlit: {e}"
-
+    except ImportError as import_error:
+        assert False, f"ImportError while loading Streamlit: {import_error}"
+    except Exception as general_error:
+        assert False, f"Unexpected error while loading Streamlit: {general_error}"

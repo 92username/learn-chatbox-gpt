@@ -51,6 +51,12 @@ jobs:
           sudo apt-get update && sudo apt-get install rsync -y
           rsync -av --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -i key.pem" ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
 
+      - name: Criar arquivo .env na EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+          echo "${{ secrets.DOTENV_CONTENT }}" > /home/ubuntu/app/.env
+          EOF
+
       - name: Deploy containerized app on EC2
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'

@@ -51,14 +51,15 @@ jobs:
           sudo apt-get update && sudo apt-get install rsync -y
           rsync -av --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -i key.pem" ./ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app
 
-      - name: Restart application on EC2 (via nohup)
+      - name: Deploy containerized app on EC2
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-          sudo pkill -f "streamlit run" || true
-          cd /home/ubuntu/app
-          nohup streamlit run form.py > log.out 2>&1 &
+            cd /home/ubuntu/app
+            docker stop learn-chatbox-gpt || true
+            docker rm learn-chatbox-gpt || true
+            docker build -t learn-chatbox-gpt .
+            docker run -d --name learn-chatbox-gpt -p 8501:8501 --env-file .env learn-chatbox-gpt
           EOF
-        
 
       - name: Clean up SSH key
         run: rm -f key.pem

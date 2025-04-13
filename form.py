@@ -101,7 +101,7 @@ def gerar_exercicios(linguagem, niveis, tema, quantidades):
                 }
             )
 
-    # Chamada à API OpenAI
+    # Chamada à API OpenAI #fake trigger.
 
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",

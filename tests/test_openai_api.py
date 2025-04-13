@@ -23,3 +23,4 @@ def test_openai_mock_call():
         )
 
         assert response.choices[0].message.content == "Simulação OK"
+        

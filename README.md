@@ -21,7 +21,7 @@ This app generates programming exercises based on difficulty levels, using ChatG
 
 The app is 100% functional and can be accessed by clicking the badge below:
 
-[![AWS](https://img.shields.io/badge/AWS-Cloud-%230072C6.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](http://3.233.24.241:8501/)
+[![AWS](https://img.shields.io/badge/AWS-Cloud-%230072C6.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://chatbox.tamanduas.dev/)
 > **Note:** Software is online !
 
 ![Containerized](https://img.shields.io/badge/Containerized-Docker-blue?logo=docker&logoColor=white&style=for-the-badge)

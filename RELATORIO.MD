@@ -2,13 +2,13 @@
 
 ## Visão Geral
 
-Este documento apresenta o fluxo completo de desenvolvimento, containerização e deployment do projeto **Chatbox GPT - Gerador de Exercícios**, com foco nas práticas de DevOps utilizadas para viabilizar sua execução em produção via AWS.
+Este documento apresenta o fluxo completo de desenvolvimento, containerização e deployment do projeto **Chatbox GPT - Gerador de Exercícios**.
 
 ---
 
 ## 1. Estrutura do Projeto
 
-A aplicação foi desenvolvida em Python, utilizando o framework **Streamlit** para interface interativa com o usuário. Seu objetivo é gerar listas de exercícios personalizados com base em três parâmetros: linguagem de programação, tema e nível de dificuldade.
+A aplicação foi desenvolvida em Python, utilizando o framework **Streamlit** para interface com o usuário. Seu objetivo é gerar listas de exercícios personalizados com base em três parâmetros: linguagem de programação, tema e nível de dificuldade.
 
 O projeto utiliza a API da OpenAI para geração dinâmica de conteúdo com inteligência artificial. O modelo utilizado é o `gpt-3.5-turbo`.
 
@@ -45,13 +45,13 @@ O projeto está versionado no GitHub.
 
 ### 3.1 Qualidade do Código
 
-O código foi avaliado com a ferramenta Pylint, atingindo nota 9.79. Também foi analisado pela plataforma Codacy, que atribuiu conceito B. Esses resultados refletem um bom nível de padronização, legibilidade e aderência às práticas recomendadas de desenvolvimento Python e documentação.
+O código foi avaliado com a ferramenta Pylint, atingindo nota 9.79. Também foi analisado pela Codacy, que atribuiu conceito B.
 
 ---
 
 ## 4. Deploy na AWS
 
-A aplicação está hospedada em uma instância EC2 (Ubuntu 22.04) utilizando o Docker como ambiente de execução.
+A aplicação está hospedada em uma instância EC2 (Ubuntu 22.04) utilizando Docker.
 
 ### 4.1 Acesso à Instância e Setup Inicial
 
@@ -60,7 +60,7 @@ O setup da instância foi realizado via terminal com autenticação por chave SS
 ### 4.2 Configuração da AWS
 - Liberação da porta `8501` no Security Group
 - Configuração de variáveis via `.env`
-- [ ] Planejamento para HTTPS com Nginx + Certbot
+- [X] Planejamento para HTTPS com Nginx + Certbot
 
 ---
 
@@ -72,9 +72,9 @@ O setup da instância foi realizado via terminal com autenticação por chave SS
 
 ## 6. Monitoramento e Expansão (Roadmap)
 
-- [ ] Integração com Nginx como reverse proxy para domínio customizado
-- [ ] Configuração HTTPS com Certbot e renovação automática
-- [ ] Monitoramento de containers com Prometheus + Grafana (planejado)
+- [X] Integração com Nginx como reverse proxy para domínio customizado
+- [X] Configuração HTTPS com Certbot e renovação automática
+- [ ] Monitoramento de containers com Prometheus + Grafana
 ---
 
 ## Conclusão
